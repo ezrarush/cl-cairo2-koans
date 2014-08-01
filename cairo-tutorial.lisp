@@ -1,3 +1,7 @@
+(ql:quickload "cl-cairo2")
+
+(in-package :cl-cairo2)
+
 ;; http://cairographics.org/tutorial/
 
 ;; (defparameter *surface* (create-pdf-surface "example.pdf" 200 200))
@@ -67,4 +71,15 @@
     (set-source lin-pat)
     (fill-path)))
 
+(with-png-file ("simple-text.png" :argb32 200 200)
+  
+  ;; (set-source-rgb r g b) is equivalent to using (set-source-rgba r g b 1.0)
+  ;;(set-source-rgb 1 1 1)
+  
+  ;; clear background to the source 
+  ;;(paint)
+  (move-to 0 100)
+  (set-font-size 50)
+  (show-text "foo")
+  (destroy *context*))
 
