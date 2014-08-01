@@ -9,7 +9,9 @@ Learn [cl-cairo2](https://github.com/rpav/cl-cairo2) with koans. These koans are
 
 From a terminal, execute your lisp interpreter on the file 'contemplate.lsp' e.g.
 
-sbcl --script contemplate.lsp
+```
+sbcl --load contemplate.lisp
+```
 
 #Quoting the Ruby Koans instructions::
 
